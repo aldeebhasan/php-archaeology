@@ -9,7 +9,7 @@ Outcome: `php bin/archaeo init` works in a real project installed via a Composer
   - `tests/SmokeTest.php`, a trivial test so the suite isn't empty.
   - Done when: `composer install && composer check` is green.
 
-- [ ] **1.2 `bin/archaeo`**
+- [x] **1.2 `bin/archaeo`**
   - Entry point per roadmap §10 that registers commands via the D3 compat. Start with `InitCommand` only.
   - `chmod +x`.
   - Add `src` and `bin/archaeo` to `phpstan.neon.dist` paths.

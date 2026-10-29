@@ -1,0 +1,20 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+// Composer 2.2+ gives the path of the host project's autoloader.
+// The fallback is for running the script inside the package repository itself.
+require $GLOBALS['_composer_autoload_path'] ?? __DIR__ . '/../vendor/autoload.php';
+
+use CodeArchaeology\Command;
+use Symfony\Component\Console\Application;
+
+$app = new Application('Code Archaeology', '0.1.0');
+
+// D3: addCommands() exists in Symfony 6.4–8 and picks add()/addCommand() itself
+$app->addCommands([
+    new Command\InitCommand(),
+]);
+
+$app->run();

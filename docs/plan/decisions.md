@@ -6,7 +6,7 @@ Resolved ambiguities in `docs/roadmap.md`. Cite by ID. Add new entries at the bo
 
 **D2 — Version ranges.** `symfony/console` and `symfony/process`: `^6.4 || ^7.0 || ^8.0`. `nikic/php-parser`: `^4.18 || ^5.0`. CI runs `--prefer-lowest` and latest to cover both ends.
 
-**D3 — Command registration compat.** Symfony 7.4 deprecates `Application::add()` in favour of `addCommand()`; it is removed in 8.0. Verify this in task 1.2. `bin/archaeo` registers commands via `method_exists($app, 'addCommand') ? $app->addCommand($c) : $app->add($c)`. Commands use the `#[AsCommand]` attribute plus `configure()`; no other version-specific Console API.
+**D3 — Command registration compat.** Symfony 7.4 deprecates `Application::add()` in favour of `addCommand()` (verified); 8.0 removes it. `bin/archaeo` registers commands only via `addCommands([...])`. That method exists in 6.4–8 and delegates to the right method, so no version branch is needed. Commands use the `#[AsCommand]` attribute plus `configure()`; no other version-specific Console API.
 
 **D4 — Parser compat.** One class `Parser\ParserFactory::create()`: v5 → `(new \PhpParser\ParserFactory())->createForNewestSupportedVersion()`, v4 → `->create(ParserFactory::PREFER_PHP7)`. Use only node classes that exist in both (`Stmt\Class_`, `Stmt\Interface_`, `Stmt\Trait_`, `Stmt\Enum_`, `Stmt\Function_`, `Stmt\ClassMethod`, `Expr\*Call`, `Expr\New_`, `Scalar\String_`). Always run `NodeVisitor\NameResolver` first.
 
