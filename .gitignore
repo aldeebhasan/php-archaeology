@@ -1,0 +1,6 @@
+/vendor/
+/composer.lock
+/.phpunit.cache/
+/.archaeology/
+/.idea/
+/.claude/settings.local.json
