@@ -2,7 +2,7 @@
 
 Outcome: `php bin/archaeo init` works in a real project installed via a Composer path repository.
 
-- [ ] **1.1 Project files**
+- [x] **1.1 Project files**
   - `composer.json`: start from roadmap §10, apply the D2 ranges, add `phpstan/phpstan` to require-dev (D19), and add scripts `test`, `stan`, `check` (= test + stan).
   - `phpunit.xml.dist` (testsuite `tests/`, fail on warning/risky), `phpstan.neon.dist` (level 8, paths `src` `bin` `tests`).
   - `.gitattributes` (roadmap §10 + `/docs export-ignore`, `/CLAUDE.md export-ignore`, `/.claude export-ignore`, `/phpstan.neon.dist export-ignore`).
@@ -12,6 +12,7 @@ Outcome: `php bin/archaeo init` works in a real project installed via a Composer
 - [ ] **1.2 `bin/archaeo`**
   - Entry point per roadmap §10 that registers commands via the D3 compat. Start with `InitCommand` only.
   - `chmod +x`.
+  - Add `src` and `bin/archaeo` to `phpstan.neon.dist` paths.
   - Done when: `php bin/archaeo list` shows `init`.
 
 - [ ] **1.3 `Project\ProjectLocator`**

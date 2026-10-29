@@ -1,0 +1,5 @@
+parameters:
+    level: 8
+    # add src and bin/archaeo here once they exist (task 1.2)
+    paths:
+        - tests

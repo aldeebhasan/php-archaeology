@@ -8,7 +8,7 @@ Each task has an ID, the files it touches and a **Done when** check. A task is d
 
 | Phase | File | Status |
 |---|---|---|
-| 1. Package skeleton | [phase-1-skeleton.md](phase-1-skeleton.md) | not started |
+| 1. Package skeleton | [phase-1-skeleton.md](phase-1-skeleton.md) | in progress (1.1 done) |
 | 2. Excavation | [phase-2-excavation.md](phase-2-excavation.md) | not started |
 | 3. Carbon dating | [phase-3-carbon-dating.md](phase-3-carbon-dating.md) | not started |
 | 4. Fossils & reports | [phase-4-fossils.md](phase-4-fossils.md) | not started |
@@ -39,5 +39,5 @@ ProjectLocator → Config → Preflight
 
 ## Open questions (block only the noted task)
 
-- **O1** Vendor name for Packagist (D1). Blocks 6.4; a placeholder is fine until then.
+- ~~O1~~ Resolved: `aldeebhasan/php-archaeology` (D1).
 - **O2** Which 2–3 real projects to benchmark on (6.1). Suggestion: `monolog/monolog`, `guzzlehttp/guzzle`, and one Laravel app of your own.

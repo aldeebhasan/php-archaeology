@@ -2,7 +2,7 @@
 
 Resolved ambiguities in `docs/roadmap.md`. Cite by ID. Add new entries at the bottom; never renumber.
 
-**D1 — Package name.** `yourname/code-archaeology` is a placeholder. Open question: real vendor name (see README "Open questions"). Namespace `CodeArchaeology\`, binary `archaeo`.
+**D1 — Package name.** `aldeebhasan/php-archaeology` (GitHub: aldeebhasan/php-archaeology). Namespace `CodeArchaeology\`, binary `archaeo`.
 
 **D2 — Version ranges.** `symfony/console` and `symfony/process`: `^6.4 || ^7.0 || ^8.0`. `nikic/php-parser`: `^4.18 || ^5.0`. CI runs `--prefer-lowest` and latest to cover both ends.
 
