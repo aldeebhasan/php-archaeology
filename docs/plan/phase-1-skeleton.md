@@ -15,7 +15,7 @@ Outcome: `php bin/archaeo init` works in a real project installed via a Composer
   - Add `src` and `bin/archaeo` to `phpstan.neon.dist` paths.
   - Done when: `php bin/archaeo list` shows `init`.
 
-- [ ] **1.3 `Project\ProjectLocator`**
+- [x] **1.3 `Project\ProjectLocator`**
   - `locate(string $cwd): Project`. Walks up to the first `composer.json`, then runs `git rev-parse --show-toplevel` there.
   - Throws `ProjectNotFound` with roadmap §3's exact message when there is no git repo.
   - `Project` (readonly): `root`, `dataDir` (`root/.archaeology`), `dbPath`, `configPath`.

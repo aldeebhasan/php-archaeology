@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace CodeArchaeology\Command;
 
+use CodeArchaeology\Project\ProjectLocator;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -14,8 +15,8 @@ final class InitCommand extends Command
 {
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        // shortcut: placeholder until 1.3 (ProjectLocator) and 1.6 (real init) land
-        $output->writeln('Dig site: ' . getcwd());
+        // shortcut: only prints the root until 1.6 (real init) lands
+        $output->writeln('Dig site: ' . (new ProjectLocator())->locate((string) getcwd())->root);
 
         return Command::SUCCESS;
     }
